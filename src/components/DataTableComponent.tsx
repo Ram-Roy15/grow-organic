@@ -50,7 +50,7 @@ export default function CheckboxRowSelectionDemo() {
           selectionMode="multiple"
           headerStyle={{ width: "3rem" }}
         ></Column>
-        <Column field="Title" header="Title"></Column>
+        <Column field="title" header="Title"></Column>
         <Column field="place_of_origin" header="Place_of_origin"></Column>
         <Column field="artist_display" header="Artist_display"></Column>
         <Column field="inscriptions" header="Inscriptions"></Column>
