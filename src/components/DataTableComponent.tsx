@@ -11,7 +11,7 @@ import axios from "axios";
 export default function CheckboxRowSelectionDemo() {
   const [products, setProducts] = useState([]);
   const [selectedProducts, setSelectedProducts] = useState([]);
-  const [rowClick, setRowClick] = useState<boolean>(true);
+  const [rowClick] = useState<boolean>(true);
   const [totalRecords, setTotalRecords] = useState(0);
   const [loading, setLoading] = useState(false);
   const [pagination, setPagination] = useState({ page: 0, rows: 12 });
@@ -47,12 +47,12 @@ export default function CheckboxRowSelectionDemo() {
   };
 
   // Function to open the OverlayPanel and show row details
-  const showOverlay = (event: React.MouseEvent, rowData: any) => {
+  const showOverlay = (event: React.MouseEvent, rowData: never) => {
     setSelectedRowData(rowData);
     overlayRef.current?.toggle(event);
   };
 
-  const actionBodyTemplate = (rowData: any) => {
+  const actionBodyTemplate = (rowData: unknown) => {
     return (
       <Button
         type="button"
@@ -66,28 +66,12 @@ export default function CheckboxRowSelectionDemo() {
   const op = useRef(null);
   return (
     <div>
-      {/* <div
-        className="overlay-panel"
-        onClick={overlayRef.current?.hide}
-        style={{
-          width: "300px",
-          height: "30px",
-          zIndex: 50,
-          position: "absolute",
-
-          transform: "translateX(10%)",
-
-          margin: "60px 0",
-        }}
-      >
-        <FaChevronDown />
-      </div> */}
       <div className="">
         <i
           className="pi pi-angle-down
 "
           style={{
-            width: "300px",
+            width: "280px",
             height: "30px",
             zIndex: 50,
             position: "absolute",
@@ -114,7 +98,7 @@ export default function CheckboxRowSelectionDemo() {
                 padding: "0 10px",
               }}
             />
-            <Button  label="Submit" />
+            <Button label="Submit" />
           </div>
         </OverlayPanel>
       </div>
