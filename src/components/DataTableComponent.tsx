@@ -1,9 +1,6 @@
-
-
 import { useState, useEffect, useRef } from "react";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
-
 import { Button } from "primereact/button";
 import { OverlayPanel } from "primereact/overlaypanel";
 import axios from "axios";
@@ -97,7 +94,6 @@ export default function CheckboxRowSelectionDemo() {
         />
       </DataTable>
 
-      {/* OverlayPanel Component */}
       <OverlayPanel ref={overlayRef} style={{ width: "300px" }}>
         {selectedRowData ? (
           <div>
