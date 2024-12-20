@@ -14,7 +14,6 @@ const App: React.FC = () => {
       </header>
       <main>
         <DataTableComponent />
-        {/* <Table></Table> */}
       </main>
     </div>
   );
