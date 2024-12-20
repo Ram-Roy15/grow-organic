@@ -4,6 +4,7 @@ import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "./App.css";
 import DataTableComponent from "./components/DataTableComponent";
+import Table from "./components/Table";
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
       </header>
       <main>
         <DataTableComponent />
+        {/* <Table></Table> */}
       </main>
     </div>
   );
